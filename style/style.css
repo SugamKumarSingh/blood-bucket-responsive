@@ -36,6 +36,7 @@ header ul {
   list-style-type: none;
   display: flex;
   float: right;
+  margin-right: 9rem;
 }
 li a {
   transition: all 0.5s ease;
@@ -60,6 +61,7 @@ ul li {
   font-weight: bold;
   background: linear-gradient(30deg, rgb(187, 22, 22), rgb(212, 119, 12));
   color: white;
+  float: right;
 }
 #main-login-Btn:hover {
   letter-spacing: 2px;
@@ -135,6 +137,7 @@ ul li {
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
+  padding-bottom: 4rem;
 }
 #benefits .body-container .box {
   background-color: rgba(255, 235, 205, 0.75);
@@ -189,6 +192,55 @@ ul li {
 }
 
 /* Team */
-
+#team .body-container {
+  padding: 0rem 6rem 0rem 6rem;
+  /* max-width: fit-content; */
+  justify-content: space-evenly;
+}
+#team .body-container .box {
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  background-color: rgba(255, 235, 205, 0.75);
+  /* background-color: rgba(245, 222, 179, 0.5); */
+  border: 1px solid rgb(206, 206, 206);
+  flex: 1 1 150px;
+  margin: 20px;
+  max-width: fit-content;
+}
+@media only screen and (max-width: 780px) {
+  header ul li {
+    display: none;
+  }
+}
+#team .body-container .box .pic {
+  width: fit-content;
+}
+#team .body-container .box .pic img {
+  max-width: 20rem;
+  border-radius: 50%;
+  background: radial-gradient(rgb(180, 180, 180), black);
+}
+#team .body-container .box .info {
+  padding: 20px 10px 10px 10px;
+}
+#team .body-container .box .info .tname {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#team .body-container .box .info .role {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
 
 /* Footer */
+.foot {
+  margin-top: 3rem;
+  text-align: center;
+  width: 100%;
+  padding: 1rem 0rem 1rem 0rem;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(137, 43, 226, 0.5);
+}
