@@ -1,12 +1,22 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 * {
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Otomanopee One', sans-serif; */
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  scroll-behavior: smooth;
 }
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   transition: all 0.5s ease-out;
+  scroll-behavior: smooth;
 }
 
 /* Header - Navbar */
@@ -16,18 +26,23 @@ body {
   padding: 0.8rem 2rem 0.8rem 1.6rem;
   font-size: 1.25rem;
   color: white;
-  background-color: rgba(137, 43, 226, 0.5);
+  background-color: rgba(238, 123, 100, 0.8);
 }
-.logo {
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
   font-size: 1.8rem;
   transition: all 0.5s ease;
   font-weight: bold;
   float: left;
   cursor: pointer;
 }
-.logo:hover {
+
+.logo a:hover {
   letter-spacing: 2px;
 }
+
 header ul {
   position: absolute;
   top: 50%;
@@ -38,18 +53,23 @@ header ul {
   float: right;
   margin-right: 9rem;
 }
-li a {
+
+li a,
+li .dropbtn {
   transition: all 0.5s ease;
   text-decoration: none;
   color: white;
 }
+
 li a:hover {
   letter-spacing: 2px;
 }
+
 ul li {
   border-radius: 10px;
   margin: 10px;
 }
+
 #main-login-Btn {
   cursor: pointer;
   margin: 5px 20px 0px 15px;
@@ -63,6 +83,7 @@ ul li {
   color: white;
   float: right;
 }
+
 #main-login-Btn:hover {
   letter-spacing: 2px;
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.411);
@@ -74,19 +95,33 @@ ul li {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .home-box {
   padding: 20px 20px;
   flex: 0 1 150px;
 }
+
+.top-home {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  color: red;
+  position: absolute;
+  top: 6rem;
+  width: 100%;
+}
+
 .left-home {
   width: fit-content;
   background-color: rgba(245, 222, 179, 0.5);
   border-radius: 12px;
-  margin: 160px auto 80px auto;
+  margin: 190px auto 120px auto;
 }
+
 .left-home h1 {
   font-size: 6rem;
 }
+
 .right-home {
   width: fit-content;
   display: grid;
@@ -98,26 +133,93 @@ ul li {
   border-radius: 20px;
   margin: 160px auto 80px auto;
 }
+
 #searchCity {
   font-weight: 500;
-  background-color: rgb(224, 224, 224);
+  background-color: #fff;
   text-align: center;
   width: 250px;
   border-radius: 50px;
   padding: 8px 10px;
-  border: none;
+  border: 2px solid blue;
   font-size: 1.5rem;
 }
+
+#bg-select {
+  width: 150px;
+  border: 2px solid blue;
+  font-size: 1rem;
+}
+
 #search-btn {
   text-align: center;
   font-size: 1.5rem;
   padding: 6px 12px;
   border: none;
   border-radius: 8px;
-  background-color: #199475;
+  background-color: #0b62d3;
   color: #ffffff;
   cursor: pointer;
   font-weight: bold;
+}
+
+/* Search Result */
+#search-result {
+  display: none;
+}
+
+.col-form-label p {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.notAvl {
+  color: red;
+  font-weight: bold;
+  margin: 2rem 0 2rem 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.head-container h3 {
+  text-align: center;
+  padding: 3rem 0 0rem 0;
+  font-size: 2.8rem;
+  text-decoration-line: underline;
+  text-decoration-color: #e43011;
+}
+
+.head-container p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: royalblue;
+  text-decoration-line: underline;
+  text-decoration-color: royalblue;
+}
+
+.table table {
+  text-align: center;
+  border-collapse: collapse;
+  border-radius: 1rem;
+}
+
+.table tr th,
+.table tr td {
+  font-size: 1.5rem;
+  padding: 4px 8px;
+}
+
+.table table thead {
+  border-radius: 8px;
+  color: #fff;
+  background-color: rgba(211, 57, 26, 0.8);
+}
+
+.table table tbody {
+  border-radius: 8px;
+  background-color: rgba(255, 204, 128, 0.6);
 }
 
 /* Benefits */
@@ -125,6 +227,7 @@ ul li {
   display: grid;
   padding: 20px;
 }
+
 .head-container h2 {
   text-align: center;
   padding: 3rem 0 3rem 0;
@@ -132,6 +235,7 @@ ul li {
   text-decoration-line: underline;
   text-decoration-color: #e43011;
 }
+
 .body-container {
   display: flex;
   flex-wrap: wrap;
@@ -139,6 +243,11 @@ ul li {
   padding: 2rem;
   padding-bottom: 4rem;
 }
+
+#benefits .body-container {
+  padding-bottom: 9rem;
+}
+
 #benefits .body-container .box {
   background-color: rgba(255, 235, 205, 0.75);
   padding: 20px 20px;
@@ -149,9 +258,11 @@ ul li {
   flex: 1 1 150px;
   margin: 20px;
 }
+
 #benefits .body-container .box:hover {
   box-shadow: 0 0 20px black;
 }
+
 #benefits .body-container .box .box-head {
   margin-bottom: 20px;
   padding: 8px 12px;
@@ -164,11 +275,13 @@ ul li {
   display: grid;
   padding: 20px;
 }
+
 .body-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 #availability .body-container .box {
   padding: 20px 20px;
   text-align: center;
@@ -180,13 +293,16 @@ ul li {
   flex: 1 1 150px;
   margin: 20px;
 }
+
 #availability .body-container .box:hover {
   box-shadow: 0 0 20px black;
 }
+
 .box .bg-img img {
   max-width: 12rem;
   height: auto;
 }
+
 .box .qty span {
   font-size: 4rem;
 }
@@ -197,6 +313,7 @@ ul li {
   /* max-width: fit-content; */
   justify-content: space-evenly;
 }
+
 #team .body-container .box {
   padding: 20px 20px;
   text-align: center;
@@ -209,26 +326,32 @@ ul li {
   margin: 20px;
   max-width: fit-content;
 }
+
 @media only screen and (max-width: 780px) {
   header ul li {
     display: none;
   }
 }
+
 #team .body-container .box .pic {
   width: fit-content;
 }
+
 #team .body-container .box .pic img {
   max-width: 20rem;
   border-radius: 50%;
-  background: radial-gradient(rgb(180, 180, 180), black);
+  background: radial-gradient(rgb(255, 230, 162), rgb(214, 114, 0));
 }
+
 #team .body-container .box .info {
   padding: 20px 10px 10px 10px;
 }
+
 #team .body-container .box .info .tname {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 #team .body-container .box .info .role {
   font-size: 1.4rem;
   font-weight: 300;
@@ -236,11 +359,21 @@ ul li {
 
 /* Footer */
 .foot {
-  margin-top: 3rem;
   text-align: center;
   width: 100%;
   padding: 1rem 0rem 1rem 0rem;
   font-size: 1rem;
   color: white;
-  background-color: rgba(137, 43, 226, 0.5);
+  background-color: rgba(238, 123, 100, 0.8);
+}
+
+.foot a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.foot a:hover {
+  letter-spacing: 1px;
+  color: #0b62d3;
 }
