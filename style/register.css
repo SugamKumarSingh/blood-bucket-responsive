@@ -128,6 +128,7 @@ input {
 }
 
 @keyframes show {
+
   0%,
   49.99% {
     opacity: 0;
@@ -216,6 +217,7 @@ input[type="password"] {
   text-align: center;
   font-weight: bold;
 }
+
 #bg-select {
   background-color: rgb(238, 238, 238);
   /* background: linear-gradient(20deg, lightskyblue, rgb(138, 255, 187)); */
@@ -224,7 +226,7 @@ input[type="password"] {
   width: 280px;
 }
 
-/* ______________-------------______________ */
+/* ____B_L_O_O_D____--S-U-G-A-M--____B_U_C_K_E_T____ */
 
 .slide-controls {
   position: relative;
@@ -238,6 +240,7 @@ input[type="password"] {
   border-radius: 50px;
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
 }
+
 .slide {
   height: 100%;
   width: 100%;
@@ -251,6 +254,7 @@ input[type="password"] {
   z-index: 1;
   transition: all 0.6s ease;
 }
+
 .slider-tab {
   position: absolute;
   height: 100%;
@@ -263,20 +267,25 @@ input[type="password"] {
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   box-shadow: 0px 0px 10px 5px #ff802c;
 }
+
 input[type="radio"] {
   display: none;
 }
-#signUp:checked ~ .slider-tab {
+
+#signUp:checked~.slider-tab {
   left: 50%;
 }
-#signUp:checked ~ label.signUp {
+
+#signUp:checked~label.signUp {
   color: #fff;
   cursor: default;
   user-select: none;
 }
-#signUp:checked ~ label.signIn {
+
+#signUp:checked~label.signIn {
   color: #000;
 }
-#signIn:checked ~ label.signUp {
+
+#signIn:checked~label.signUp {
   color: #000;
 }
